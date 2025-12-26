@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grocery Billing System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Grocery Billing System</h1>
+
+    <!-- Customer Details -->
+    <div class="card">
+        <h2>Customer Details</h2>
+        <input type="text" id="customer" placeholder="Customer Name">
+        <p><strong>Bill No:</strong> <span id="billNo"></span></p>
+    </div>
+
+    <!-- Grocery Items -->
+    <div class="card">
+        <h2>Grocery Items</h2>
+
+        <div class="row"><span>Rice (₹50/kg)</span><input type="number" id="rice" placeholder="Qty"></div>
+        <div class="row"><span>Sugar (₹40/kg)</span><input type="number" id="sugar" placeholder="Qty"></div>
+        <div class="row"><span>Milk (₹30/l)</span><input type="number" id="milk" placeholder="Qty"></div>
+        <div class="row"><span>Oil (₹120/l)</span><input type="number" id="oil" placeholder="Qty"></div>
+        <div class="row"><span>Soap (₹35)</span><input type="number" id="soap" placeholder="Qty"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button onclick="generateBill()">Generate Bill</button>
+        <button class="print" onclick="printBill()">Print</button>
+        <button class="clear" onclick="clearBill()">Clear</button>
+    </div>
+
+    <!-- Invoice -->
+    <div class="invoice">
+        <h2>Invoice</h2>
+        <textarea id="bill" placeholder="Bill will appear here..."></textarea>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
